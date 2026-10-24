@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mainframe Quiz</title>
+    <style>
+        body { background-color: #0b0c10; color: #c5c6c7; font-family: 'Courier New', Courier, monospace; padding: 30px; margin: 0; }
+        .quiz-container { background-color: #1f2833; padding: 40px; border-radius: 8px; border: 1px solid #45a29e; box-shadow: 0 0 25px rgba(102, 252, 241, 0.15); max-width: 800px; margin: auto; }
+        h2 { text-align: center; color: #66fcf1; text-transform: uppercase; border-bottom: 2px dashed #45a29e; padding-bottom: 15px; margin-bottom: 40px; letter-spacing: 2px; }
+        .question-block { margin-bottom: 30px; padding: 20px; background-color: rgba(11, 12, 16, 0.5); border-left: 4px solid #66fcf1; transition: 0.3s; }
+        .question-block:hover { border-left-color: #fff; background-color: rgba(69, 162, 158, 0.1); }
+        .question { font-weight: bold; font-size: 1.1em; margin-bottom: 15px; color: #ffffff; }
+        .options label { display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; background: #0b0c10; border: 1px solid #1f2833; transition: 0.3s; }
+        .options label:hover { border-color: #45a29e; color: #66fcf1; }
+        input[type="radio"] { accent-color: #66fcf1; margin-right: 10px; }
+        .submit-btn { display: block; width: 100%; padding: 15px; background: transparent; color: #66fcf1; font-size: 1.2em; border: 2px solid #66fcf1; cursor: pointer; text-transform: uppercase; letter-spacing: 3px; font-weight: bold; transition: 0.3s; margin-top: 40px; }
+        .submit-btn:hover { background: #66fcf1; color: #0b0c10; box-shadow: 0 0 20px #66fcf1; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h2>// Java Mainframe Evaluation //</h2>
+    <form action="QuizServlet" method="POST">
+        
+        <div class="question-block">
+            <div class="question">01. Which company originally developed Java?</div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="Microsoft" required> Microsoft</label>
+                <label><input type="radio" name="q1" value="Sun Microsystems"> Sun Microsystems</label>
+                <label><input type="radio" name="q1" value="Oracle"> Oracle</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question">02. What is the size of an 'int' variable in Java?</div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="16 bit" required> 16 bit</label>
+                <label><input type="radio" name="q2" value="32 bit"> 32 bit</label>
+                <label><input type="radio" name="q2" value="64 bit"> 64 bit</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question">03. Which method is the entry point for any Java program?</div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="start()" required> start()</label>
+                <label><input type="radio" name="q3" value="init()"> init()</label>
+                <label><input type="radio" name="q3" value="main()"> main()</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question">04. The Java compiler translates source code into what?</div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="Machine Code" required> Machine Code</label>
+                <label><input type="radio" name="q4" value="Bytecode"> Bytecode</label>
+                <label><input type="radio" name="q4" value="Assembly"> Assembly</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question">05. Which keyword is used to inherit a class in Java?</div>
+            <div class="options">
+                <label><input type="radio" name="q5" value="implements" required> implements</label>
+                <label><input type="radio" name="q5" value="extends"> extends</label>
+                <label><input type="radio" name="q5" value="inherits"> inherits</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question">06. What is the default value of a boolean variable?</div>
+            <div class="options">
+                <label><input type="radio" name="q6" value="true" required> true</label>
+                <label><input type="radio" name="q6" value="false"> false</label>
+                <label><input type="radio" name="q6" value="null"> null</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question">07. Which exception is thrown when dividing a number by zero?</div>
+            <div class="options">
+                <label><input type="radio" name="q7" value="ArithmeticException" required> ArithmeticException</label>
+                <label><input type="radio" name="q7" value="NullPointerException"> NullPointerException</label>
+                <label><input type="radio" name="q7" value="NumberFormatException"> NumberFormatException</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question">08. What does HTTP stand for?</div>
+            <div class="options">
+                <label><input type="radio" name="q8" value="HyperText Transfer Protocol" required> HyperText Transfer Protocol</label>
+                <label><input type="radio" name="q8" value="HighTech Transmission Protocol"> HighTech Transmission Protocol</label>
+                <label><input type="radio" name="q8" value="HyperText Transport Path"> HyperText Transport Path</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question">09. Which method handles HTTP POST requests in a Servlet?</div>
+            <div class="options">
+                <label><input type="radio" name="q9" value="doGet()" required> doGet()</label>
+                <label><input type="radio" name="q9" value="doPost()"> doPost()</label>
+                <label><input type="radio" name="q9" value="service()"> service()</label>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question">10. What is the file extension of a compiled Java class?</div>
+            <div class="options">
+                <label><input type="radio" name="q10" value=".java" required> .java</label>
+                <label><input type="radio" name="q10" value=".class"> .class</label>
+                <label><input type="radio" name="q10" value=".exe"> .exe</label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Execute Evaluation</button>
+    </form>
+</div>
+
+</body>
+</html>

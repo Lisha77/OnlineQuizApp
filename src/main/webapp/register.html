@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Tech Quiz</title>
+    
+    <style>
+        body { background-color: #0b0c10; color: #c5c6c7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px;}
+        .card { background-color: #1f2833; border: 1px solid #45a29e; box-shadow: 0 0 20px rgba(102, 252, 241, 0.2); padding: 40px; border-radius: 10px; width: 100%; max-width: 400px; text-align: center;}
+        h2 { color: #66fcf1; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #45a29e; padding-bottom: 10px; margin-bottom: 25px; }
+        label { display: block; text-align: left; color: #c5c6c7; margin-bottom: 8px; font-size: 0.9em; letter-spacing: 1px; }
+        input[type=text], input[type=password] { background-color: #0b0c10; color: #66fcf1; border: 1px solid #45a29e; padding: 12px; width: 100%; box-sizing: border-box; margin-bottom: 20px; border-radius: 4px; outline: none; transition: 0.3s; }
+        input[type=text]:focus, input[type=password]:focus { border-color: #66fcf1; box-shadow: 0 0 8px rgba(102, 252, 241, 0.6); }
+        input[type=submit], .btn { background-color: transparent; color: #66fcf1; border: 2px solid #66fcf1; padding: 12px; width: 100%; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; transition: 0.3s; margin-top: 10px; }
+        input[type=submit]:hover, .btn:hover { background-color: #66fcf1; color: #0b0c10; box-shadow: 0 0 15px #66fcf1; }
+        a { color: #45a29e; text-decoration: none; font-size: 0.9em; transition: 0.3s;}
+        a:hover { color: #66fcf1; text-shadow: 0 0 8px rgba(102, 252, 241, 0.8); }
+        .footer-text { margin-top: 25px; font-size: 0.9em; }
+    </style>
+
+</head>
+<body>
+    <div class="card">
+        <h2>New Registration</h2>
+        <form action="RegisterServlet" method="POST">
+            <label>CHOOSE IDENTIFICATION (Username):</label>
+            <input type="text" name="username" required>
+            
+            <label>SET ACCESS KEY (Password):</label>
+            <input type="password" name="password" required>
+            
+            <input type="submit" value="Create Identity">
+        </form>
+        <div class="footer-text">
+            Already registered? <br><br> <a href="login.html">>> Return to Login <<</a>
+        </div>
+    </div>
+</body>
+</html>
